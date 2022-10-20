@@ -10,9 +10,11 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.9",
+    "firebase": "^9.12.1",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-hook-form": "^7.38.0",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
