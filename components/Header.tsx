@@ -2,9 +2,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import useAut from "../hooks/useAuth";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const { logout } = useAut();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,13 +50,15 @@ function Header() {
         <p className="hidden lg:inline">Kids</p>
         <NotificationsIcon className="h-6 w-6" />
 
-        <Link href="/account">
+        {/* <Link href="/account"> */}
+
           <img
+            onClick={logout}
             src="https://rb.gy/g1pwyx"
             alt=""
             className="cursor-pointer rounded"
           />
-        </Link>
+        {/* </Link> */}
       </div>
     </header>
   );
